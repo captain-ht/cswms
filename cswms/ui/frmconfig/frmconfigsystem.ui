@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmConfigSystem</class>
+ <widget class="QWidget" name="frmConfigSystem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1025</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="gboxEmailLink">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>邮件转发设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labSendEmailAddr">
+        <property name="text">
+         <string>发件邮箱</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtSendEmailAddr"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labEmailInterval">
+        <property name="text">
+         <string>间隔</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="cboxEmailInterval">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labSendEmailPwd">
+        <property name="text">
+         <string>发件密码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labReceiveEmailAddr">
+        <property name="text">
+         <string>接收邮箱</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QLineEdit" name="txtReceiveEmailAddr">
+        <property name="toolTip">
+         <string>支持多个邮箱,以英文分号;隔开</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtSendEmailPwd">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" colspan="2">
+       <widget class="QPushButton" name="btnSendEmail">
+        <property name="text">
+         <string>测试邮件</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QGroupBox" name="gboxLocalDB">
+     <property name="title">
+      <string>本地数据库设置</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="frmConfigDb" name="widgetConfigDb" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>132</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="gboxMsgLink">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>短信告警设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labMsgPortName">
+        <property name="text">
+         <string>串口名称</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="cboxMsgPortName">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labMsgBaudRate">
+        <property name="text">
+         <string>波特率</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="cboxMsgBaudRate">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <item>
+         <property name="text">
+          <string>1200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4800</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>115200</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="labMsgInterval">
+        <property name="text">
+         <string>间隔</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QComboBox" name="cboxMsgInterval">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labMsgTel">
+        <property name="text">
+         <string>接收号码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="3">
+       <widget class="QLineEdit" name="txtMsgTel">
+        <property name="toolTip">
+         <string>支持多个号码,以英文分号;隔开</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" colspan="2">
+       <widget class="QPushButton" name="btnSendMsg">
+        <property name="text">
+         <string>测试短信</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QGroupBox" name="gboxNetDB">
+     <property name="title">
+      <string>云端数据同步</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="frmConfigDbNet" name="widgetConfigDbNet" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="gboxNetLink">
+     <property name="title">
+      <string>网络转发设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="0">
+       <widget class="QLabel" name="labUseNetReceive">
+        <property name="text">
+         <string>网络接收</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="labNetReceivePort">
+        <property name="text">
+         <string>接收端口</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labUseNetSend">
+        <property name="text">
+         <string>网络转发</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labNetSendInfo">
+        <property name="text">
+         <string>IP及端口</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="SwitchButton" name="btnUseNetSend" native="true"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="SwitchButton" name="btnUseNetReceive" native="true"/>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="txtNetReceivePort">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="btnSendData">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>同步数据</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2">
+       <widget class="QLineEdit" name="txtNetSendInfo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QGroupBox" name="gboxLog">
+     <property name="title">
+      <string>日志设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="1" column="0">
+       <widget class="QLabel" name="labNodeLogMaxCount">
+        <property name="text">
+         <string>运行记录</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="cboxAlarmLogMaxCount">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="labNodeLogOrder">
+        <property name="text">
+         <string>记录排序</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labAlarmLogOrder">
+        <property name="text">
+         <string>记录排序</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labUserLogMaxCount">
+        <property name="text">
+         <string>操作记录</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="labUserLogOrder">
+        <property name="text">
+         <string>记录排序</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="labTipInterval">
+        <property name="text">
+         <string>报警弹框</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="cboxAlarmLogOrder">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QComboBox" name="cboxUserLogOrder"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labAlarmLogMaxCount">
+        <property name="text">
+         <string>报警记录</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="cboxNodeLogOrder"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="cboxNodeLogMaxCount"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="cboxUserLogMaxCount"/>
+      </item>
+      <item row="0" column="5">
+       <widget class="QComboBox" name="cboxTipInterval">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="labPrecision">
+        <property name="text">
+         <string>小数点位</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QComboBox" name="cboxPrecision"/>
+      </item>
+      <item row="2" column="5">
+       <widget class="QComboBox" name="comboBox_3">
+        <item>
+         <property name="text">
+          <string>新建项目</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>备用选项</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QGroupBox" name="gboxColor">
+     <property name="title">
+      <string>颜色设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_8">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labColorZero">
+        <property name="text">
+         <string>离线颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="ColorComboBox" name="cboxColorZero">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labColorPlotBg">
+        <property name="text">
+         <string>曲线背景</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="ColorComboBox" name="cboxColorPlotBg">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labColorUpper">
+        <property name="text">
+         <string>高报颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="ColorComboBox" name="cboxColorUpper">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="labColorPlotText">
+        <property name="text">
+         <string>曲线文字</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="ColorComboBox" name="cboxColorPlotText">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labColorLimit">
+        <property name="text">
+         <string>低报颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="ColorComboBox" name="cboxColorLimit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="labColorPlotLine">
+        <property name="text">
+         <string>曲线颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="ColorComboBox" name="cboxColorPlotLine">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labColorNormal">
+        <property name="text">
+         <string>正常颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="ColorComboBox" name="cboxColorNormal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="labColorOther">
+        <property name="text">
+         <string>其他颜色</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="ColorComboBox" name="cboxColorOther">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QGroupBox" name="gboxTime">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>系统时间设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QComboBox" name="cboxYear">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="labYear">
+        <property name="text">
+         <string>年</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QComboBox" name="cboxMonth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="labMonth">
+        <property name="text">
+         <string>月</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QComboBox" name="cboxDay">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="labDay">
+        <property name="text">
+         <string>日</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QComboBox" name="cboxHour">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="labHour">
+        <property name="text">
+         <string>时</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QComboBox" name="cboxMin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="labMin">
+        <property name="text">
+         <string>分</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QComboBox" name="cboxSec">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="labSec">
+        <property name="text">
+         <string>秒</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6" rowspan="2">
+       <widget class="QPushButton" name="btnSetTime">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <widget class="QGroupBox" name="gboxBase">
+     <property name="title">
+      <string>常规设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="2">
+       <widget class="QLabel" name="labCopyright">
+        <property name="text">
+         <string>版权所有</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3" colspan="3">
+       <widget class="QLineEdit" name="txtCopyright">
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="labStyleName">
+        <property name="text">
+         <string>界面样式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="labPlayAlarmSound">
+        <property name="text">
+         <string>报警声音</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="SwitchButton" name="btnPlayAlarmSound" native="true"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="labPlayCount">
+        <property name="text">
+         <string>播放次数</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QComboBox" name="cboxPlayCount">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLabel" name="labMsgCount">
+        <property name="text">
+         <string>警情行数</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QComboBox" name="cboxMsgCount"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="labDeviceColumn">
+        <property name="text">
+         <string>设备列数</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QComboBox" name="cboxDeviceColumn"/>
+      </item>
+      <item row="5" column="4">
+       <widget class="QLabel" name="labRecordsPerpage">
+        <property name="text">
+         <string>记录行数</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="5">
+       <widget class="QComboBox" name="cboxRecordsPerpage">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QComboBox" name="cboxStyleName"/>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="labWorkMode">
+        <property name="text">
+         <string>工作模式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QComboBox" name="cboxWorkMode"/>
+      </item>
+      <item row="1" column="3" colspan="3">
+       <widget class="QLineEdit" name="txtTitleEn"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="labTitleE">
+        <property name="text">
+         <string>英文标题</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="3">
+       <widget class="QLineEdit" name="txtTitleCn"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labTitleC">
+        <property name="text">
+         <string>中文标题</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="labSaveLog">
+        <property name="text">
+         <string>调试日志</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="SwitchButton" name="btnSaveLog" native="true"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labAutoRun">
+        <property name="text">
+         <string>开机运行</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="SwitchButton" name="btnAutoRun" native="true"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labAutoLogin">
+        <property name="text">
+         <string>自动登录</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="SwitchButton" name="btnAutoLogin" native="true"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labAutoPwd">
+        <property name="text">
+         <string>记住密码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="SwitchButton" name="btnAutoPwd" native="true"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labAutoConfirm">
+        <property name="text">
+         <string>自动确认</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="SwitchButton" name="btnAutoConfirm" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">colorcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SwitchButton</class>
+   <extends>QWidget</extends>
+   <header>switchbutton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>frmConfigDb</class>
+   <extends>QWidget</extends>
+   <header>frmconfigdb.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>frmConfigDbNet</class>
+   <extends>QWidget</extends>
+   <header>frmconfigdbnet.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>txtTitleCn</tabstop>
+  <tabstop>txtTitleEn</tabstop>
+  <tabstop>txtCopyright</tabstop>
+  <tabstop>cboxStyleName</tabstop>
+  <tabstop>cboxPlayCount</tabstop>
+  <tabstop>cboxMsgCount</tabstop>
+  <tabstop>cboxDeviceColumn</tabstop>
+  <tabstop>cboxRecordsPerpage</tabstop>
+  <tabstop>txtNetSendInfo</tabstop>
+  <tabstop>txtNetReceivePort</tabstop>
+  <tabstop>btnSendData</tabstop>
+  <tabstop>cboxAlarmLogMaxCount</tabstop>
+  <tabstop>cboxAlarmLogOrder</tabstop>
+  <tabstop>cboxNodeLogMaxCount</tabstop>
+  <tabstop>cboxNodeLogOrder</tabstop>
+  <tabstop>cboxUserLogMaxCount</tabstop>
+  <tabstop>cboxUserLogOrder</tabstop>
+  <tabstop>cboxColorZero</tabstop>
+  <tabstop>cboxColorPlotBg</tabstop>
+  <tabstop>cboxColorUpper</tabstop>
+  <tabstop>cboxColorPlotText</tabstop>
+  <tabstop>cboxColorLimit</tabstop>
+  <tabstop>cboxColorPlotLine</tabstop>
+  <tabstop>cboxColorNormal</tabstop>
+  <tabstop>cboxColorOther</tabstop>
+  <tabstop>cboxMsgPortName</tabstop>
+  <tabstop>cboxMsgBaudRate</tabstop>
+  <tabstop>cboxMsgInterval</tabstop>
+  <tabstop>txtMsgTel</tabstop>
+  <tabstop>btnSendMsg</tabstop>
+  <tabstop>txtSendEmailAddr</tabstop>
+  <tabstop>cboxEmailInterval</tabstop>
+  <tabstop>txtSendEmailPwd</tabstop>
+  <tabstop>txtReceiveEmailAddr</tabstop>
+  <tabstop>btnSendEmail</tabstop>
+  <tabstop>cboxYear</tabstop>
+  <tabstop>cboxMonth</tabstop>
+  <tabstop>cboxDay</tabstop>
+  <tabstop>cboxHour</tabstop>
+  <tabstop>cboxMin</tabstop>
+  <tabstop>cboxSec</tabstop>
+  <tabstop>btnSetTime</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

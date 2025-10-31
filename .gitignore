@@ -1,0 +1,30 @@
+# Build artifacts
+build/
+bin/
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.qrc.dep
+*.rcc
+.moc/
+*.moc
+*.qm
+*.qmake.stash
+*.pro.user*
+*.pri.user*
+.qmake.cache
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+Makefile
+moc_*
+ui_*
+qrc_*
+*.user
+.DS_Store
+# IDE
+.vscode/
+.idea/

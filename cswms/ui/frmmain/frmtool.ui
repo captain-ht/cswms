@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmTool</class>
+ <widget class="QWidget" name="frmTool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab1">
+      <attribute name="title">
+       <string>设备采集模拟</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTextEdit" name="txtMain">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frameDevice">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>160</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="2" column="1">
+             <widget class="QComboBox" name="cboxPortName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="labDeviceType">
+              <property name="text">
+               <string>设  备</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="labDeviceAddr">
+              <property name="text">
+               <string>地  址</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="cboxBaudRate"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="labPortName">
+              <property name="text">
+               <string>串口号</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labBaudRate">
+              <property name="text">
+               <string>波特率</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="cboxDeviceAddr">
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="labListenPort">
+              <property name="text">
+               <string>端口号</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="txtListenPort">
+              <property name="text">
+               <string>502</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="cboxDeviceType"/>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QPushButton" name="btnOpen">
+            <property name="text">
+             <string>打开串口</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QPushButton" name="btnListen">
+            <property name="text">
+             <string>监听服务</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="btnClearData">
+            <property name="text">
+             <string>清空数据</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QPushButton" name="btnShowData">
+            <property name="text">
+             <string>暂停显示</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QSpinBox" name="spinBox1_1">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSpinBox" name="spinBox1_2">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>785</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QSpinBox" name="spinBox1_3">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>60</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSpinBox" name="spinBox1_4">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>88</number>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QSpinBox" name="spinBox1_5">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QSpinBox" name="spinBox1_6">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>785</number>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QSpinBox" name="spinBox1_7">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>60</number>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QSpinBox" name="spinBox1_8">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>88</number>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QSpinBox" name="spinBox1_9">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QSpinBox" name="spinBox1_10">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>785</number>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QSpinBox" name="spinBox1_11">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>60</number>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QSpinBox" name="spinBox1_12">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>88</number>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QSpinBox" name="spinBox1_13">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QSpinBox" name="spinBox1_14">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>785</number>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QSpinBox" name="spinBox1_15">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>60</number>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1">
+           <widget class="QSpinBox" name="spinBox1_16">
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>88</number>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0" colspan="2">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab2">
+      <attribute name="title">
+       <string>数据库采集模拟</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTableView" name="tableView"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frameDb">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>160</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btnAdd">
+            <property name="text">
+             <string>添加</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../other/main.qrc">
+              <normaloff>:/image/btn_add.png</normaloff>:/image/btn_add.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSave">
+            <property name="text">
+             <string>保存</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../other/main.qrc">
+              <normaloff>:/image/btn_save.png</normaloff>:/image/btn_save.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDelete">
+            <property name="text">
+             <string>删除</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../other/main.qrc">
+              <normaloff>:/image/btn_close.png</normaloff>:/image/btn_close.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnReturn">
+            <property name="text">
+             <string>撤销</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../other/main.qrc">
+              <normaloff>:/image/btn_move.png</normaloff>:/image/btn_move.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnClear">
+            <property name="text">
+             <string>清空</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../other/main.qrc">
+              <normaloff>:/image/btn_delete.png</normaloff>:/image/btn_delete.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ckAutoData">
+            <property name="text">
+             <string>自动模拟</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>cboxDeviceType</tabstop>
+  <tabstop>cboxPortName</tabstop>
+  <tabstop>cboxBaudRate</tabstop>
+  <tabstop>btnOpen</tabstop>
+  <tabstop>txtListenPort</tabstop>
+  <tabstop>btnListen</tabstop>
+  <tabstop>btnClearData</tabstop>
+  <tabstop>btnShowData</tabstop>
+  <tabstop>spinBox1_1</tabstop>
+  <tabstop>spinBox1_2</tabstop>
+  <tabstop>spinBox1_3</tabstop>
+  <tabstop>spinBox1_4</tabstop>
+  <tabstop>spinBox1_5</tabstop>
+  <tabstop>spinBox1_6</tabstop>
+  <tabstop>spinBox1_7</tabstop>
+  <tabstop>spinBox1_8</tabstop>
+  <tabstop>txtMain</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../other/main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/chinesename_control.txt</file>
+        <file>image/chinesename_property.txt</file>
+        <file>image/cursor-arrow.png</file>
+        <file>image/cursor-busy.png</file>
+        <file>image/cursor-closedhand.png</file>
+        <file>image/cursor-cross.png</file>
+        <file>image/cursor-forbidden.png</file>
+        <file>image/cursor-hand.png</file>
+        <file>image/cursor-hsplit.png</file>
+        <file>image/cursor-ibeam.png</file>
+        <file>image/cursor-openhand.png</file>
+        <file>image/cursor-sizeall.png</file>
+        <file>image/cursor-sizeb.png</file>
+        <file>image/cursor-sizef.png</file>
+        <file>image/cursor-sizeh.png</file>
+        <file>image/cursor-sizev.png</file>
+        <file>image/cursor-uparrow.png</file>
+        <file>image/cursor-vsplit.png</file>
+        <file>image/cursor-wait.png</file>
+        <file>image/cursor-whatsthis.png</file>
+    </qresource>
+</RCC>
