@@ -1,4 +1,4 @@
-﻿#include "sendemailthread.h"
+#include "sendemailthread.h"
 #include "smtpmime.h"
 
 #pragma execution_character_set("utf-8")
@@ -22,9 +22,11 @@ SendEmailThread::SendEmailThread(QObject *parent) : QThread(parent)
 {
     stopped = false;
     emialTitle = "邮件标题";
-    sendEmailAddr = "liuyang_tekkens@163.com";
-    sendEmailPwd = "123456789";
-    receiveEmailAddr = "liuyang_tekkens@163.com;297000733@qq.com";
+    // NOTE: Email configuration should be loaded from config file or environment variables
+    // Do not hardcode sensitive information like passwords and email addresses
+    sendEmailAddr = "";
+    sendEmailPwd = "";
+    receiveEmailAddr = "";
     contents.clear();
     fileNames.clear();
 }
